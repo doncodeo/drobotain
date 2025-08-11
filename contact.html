@@ -9,14 +9,20 @@
 <body>
     <header class="header scrolled">
         <nav class="navbar container">
-            <a href="index.html" class="logo">DROBO<span>TAIN</span></a>
-            <ul class="nav-links">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-placeholder.png" alt="Drobotain Logo" style="height: 40px;">
+            </a>
+            <button class="mobile-nav-toggle" aria-controls="nav-links" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="programs.html">Programs</a></li>
                 <li><a href="education.html">Education</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><button id="theme-toggle" class="theme-toggle-btn">🌓</button></li>
             </ul>
         </nav>
     </header>
@@ -64,6 +70,29 @@
             <p>&copy; 2025 Drobotain. All Rights Reserved.</p>
         </div>
     </footer>
+    <!-- Chatbot -->
+    <div class="chatbot">
+        <div class="chatbot-trigger">
+            <div class="tooltip">Chat with Drobotain</div>
+            <button id="chatbot-toggle">🤖</button>
+        </div>
+        <div class="chat-window" id="chat-window">
+            <div class="chat-header">
+                <h3>Drobotain Assistant</h3>
+                <button class="close-chat" id="close-chat">&times;</button>
+            </div>
+            <div class="chat-body" id="chat-body">
+                <div class="message received">
+                    <p>Hello! How can I help you today? You can ask about our programs, events, or contact info. You can also connect with a <a href="https://wa.me/2349041444403" target="_blank">live agent</a>.</p>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="chat-input" placeholder="Type a message...">
+                <button id="chat-send">Send</button>
+            </div>
+        </div>
+    </div>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>

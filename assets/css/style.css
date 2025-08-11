@@ -3,22 +3,39 @@
 
 /* --- 1. Root Variables & Global Styles --- */
 :root {
-    --midnight-blue: #0B1C3D;
-    --graphite-gray: #333333;
-    --cyber-blue: #00AFFF;
-    --circuit-gold: #FFD700;
-    --pure-white: #FFFFFF;
-    --off-white: #F8F9FA;
-    --light-gray: #e9ecef;
+    --bg-color: #FFFFFF;
+    --text-color: #333333;
+    --heading-color: #0B1C3D;
+    --primary-color: #007AFF; /* Apple's blue */
+    --accent-color: #FFD700;
+    --card-bg: #F8F9FA;
+    --border-color: #e9ecef;
+    --header-bg: rgba(255, 255, 255, 0.8);
+    --header-text: #0B1C3D;
+    --logo-span: var(--primary-color);
+
     --danger-red: #dc3545;
     --success-green: #28a745;
-    --font-heading: 'Montserrat', sans-serif;
-    --font-body: 'Lato', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
     --transition-speed: 0.3s;
 }
 
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #EAEAEA;
+    --heading-color: #FFFFFF;
+    --primary-color: #0A84FF;
+    --accent-color: #FFD700;
+    --card-bg: #1E1E1E;
+    --border-color: #333333;
+    --header-bg: rgba(28, 28, 30, 0.8);
+    --header-text: #FFFFFF;
+    --logo-span: var(--primary-color);
+}
+
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600;700&display=swap');
 
 * {
     margin: 0;
@@ -32,10 +49,11 @@ html {
 
 body {
     font-family: var(--font-body);
-    background-color: var(--pure-white);
-    color: var(--graphite-gray);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 .container {
@@ -46,7 +64,7 @@ body {
 
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
-    color: var(--midnight-blue);
+    color: var(--heading-color);
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -57,12 +75,12 @@ p {
 
 a {
     text-decoration: none;
-    color: var(--cyber-blue);
+    color: var(--primary-color);
     transition: color var(--transition-speed) ease;
 }
 
 a:hover {
-    color: var(--circuit-gold);
+    color: var(--accent-color);
 }
 
 img {
@@ -70,13 +88,13 @@ img {
 }
 
 .section {
-    padding: 6rem 0;
+    padding: 8rem 0;
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .btn {
@@ -91,13 +109,13 @@ img {
 }
 
 .btn-primary {
-    background-color: var(--cyber-blue);
-    color: var(--pure-white);
+    background-color: var(--primary-color);
+    color: #FFFFFF;
 }
 
 .btn-primary:hover {
-    background-color: var(--circuit-gold);
-    color: var(--midnight-blue);
+    background-color: var(--accent-color);
+    color: var(--heading-color);
     transform: translateY(-3px);
 }
 
@@ -111,10 +129,12 @@ img {
     z-index: 1000;
     transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
     padding: 1rem 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .header.scrolled {
-    background-color: var(--pure-white);
+    background-color: var(--header-bg);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -128,16 +148,23 @@ img {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--midnight-blue);
+    color: #FFFFFF; /* White on hero */
+}
+
+.header.scrolled .logo {
+    color: var(--header-text);
 }
 
 .logo span {
-    color: var(--cyber-blue);
+    color: var(--accent-color);
 }
 
-.header.scrolled .logo,
+.header.scrolled .logo span {
+    color: var(--primary-color);
+}
+
 .header.scrolled .nav-links a {
-    color: var(--midnight-blue);
+    color: var(--header-text);
 }
 
 .nav-links {
@@ -150,7 +177,7 @@ img {
 }
 
 .nav-links a {
-    color: var(--pure-white);
+    color: #FFFFFF; /* White on hero */
     font-weight: 700;
     padding-bottom: 5px;
     position: relative;
@@ -163,7 +190,7 @@ img {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--circuit-gold);
+    background-color: var(--accent-color);
     transition: width var(--transition-speed) ease;
 }
 
@@ -175,7 +202,7 @@ img {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(11, 28, 61, 0.7), rgba(11, 28, 61, 0.7)), url('assets/images/hero-drone.png') no-repeat center center/cover;
-    color: var(--pure-white);
+    color: #FFFFFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -191,7 +218,7 @@ img {
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    color: var(--pure-white);
+    color: #FFFFFF;
 }
 
 .hero p {
@@ -207,74 +234,65 @@ img {
 }
 
 .card {
-    background: var(--pure-white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
     text-align: center;
-    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed) ease;
 }
 
 .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
     margin-top: 1rem;
 }
 
-/* --- 5. Upcoming Events Carousel --- */
-.carousel {
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-    min-width: 100%;
-    padding: 1rem;
-}
-
-.event-card {
-    background-color: var(--midnight-blue);
-    color: var(--pure-white);
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
+/* --- 5. Upcoming Events Section --- */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.event-card img {
-    width: 40%;
+.event-card-new {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.event-card-new:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.event-card-img {
+    width: 100%;
+    height: 200px;
     object-fit: cover;
 }
 
-.event-content {
-    padding: 2rem;
+.event-card-content {
+    padding: 1.5rem;
 }
 
-.event-content h3 {
-    color: var(--circuit-gold);
+.event-date {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
 
-.carousel-controls {
-    text-align: center;
+.btn-link {
+    display: inline-block;
     margin-top: 1rem;
-}
-
-.carousel-btn {
-    background: var(--light-gray);
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    margin: 0 0.5rem;
-    border-radius: 5px;
+    font-weight: 700;
+    color: var(--primary-color);
 }
 
 /* --- 6. About Page & Animated Sections --- */
@@ -304,14 +322,14 @@ img {
 }
 
 .skill-card {
-    background: var(--off-white);
+    background: var(--card-bg);
     padding: 2rem;
-    border-left: 5px solid var(--cyber-blue);
+    border-left: 5px solid var(--primary-color);
     transition: background-color var(--transition-speed);
 }
 
 .skill-card:hover {
-    background-color: var(--light-gray);
+    background-color: var(--border-color);
 }
 
 /* --- 8. Gallery Page --- */
@@ -398,23 +416,27 @@ img {
 .contact-form textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     font-family: var(--font-body);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
 }
 
 .contact-info h3 {
-    border-bottom: 2px solid var(--cyber-blue);
+    border-bottom: 2px solid var(--primary-color);
     padding-bottom: 0.5rem;
     display: inline-block;
 }
 
 /* --- 11. Footer --- */
 .footer {
-    background: var(--midnight-blue);
-    color: var(--off-white);
+    background: var(--heading-color);
+    color: var(--bg-color);
     padding: 3rem 0;
     text-align: center;
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 .footer p {
@@ -422,14 +444,14 @@ img {
 }
 
 .footer a {
-    color: var(--cyber-blue);
+    color: var(--accent-color);
 }
 
 /* --- 12. Animations --- */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -437,15 +459,216 @@ img {
     }
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: #FFFFFF; /* White on hero */
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color var(--transition-speed) ease;
+}
+
+.header.scrolled .theme-toggle-btn {
+    color: var(--header-text);
+}
+
+.theme-toggle-btn:hover {
+    color: var(--accent-color);
+}
+
+/* --- 14. Chatbot --- */
+.chatbot {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.chatbot-trigger button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.chatbot-trigger button:hover {
+    transform: scale(1.1);
+}
+
+.chatbot-trigger .tooltip {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--heading-color);
+    color: var(--bg-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+}
+
+.chatbot-trigger:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.chat-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 350px;
+    max-width: 90vw;
+    background: var(--bg-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.chat-window.open {
+    transform: scale(1);
+}
+
+.chat-header {
+    background: var(--heading-color);
+    color: var(--bg-color);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h3 {
+    margin: 0;
+    color: var(--bg-color);
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: var(--bg-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 1rem;
+    flex-grow: 1;
+    overflow-y: auto;
+    height: 300px;
+}
+
+.message {
+    display: flex;
+    margin-bottom: 1rem;
+    max-width: 85%;
+}
+
+.message p {
+    padding: 0.8rem;
+    border-radius: 15px;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.message.received {
+    align-self: flex-start;
+}
+
+.message.received p {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-bottom-left-radius: 0;
+}
+
+.message.sent {
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.message.sent p {
+    background: var(--primary-color);
+    color: white;
+    border-bottom-right-radius: 0;
+}
+
+.chat-footer {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+#chat-input {
+    flex-grow: 1;
+    border: 1px solid var(--border-color);
+    background: var(--bg-color);
+    padding: 0.8rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    color: var(--text-color);
+}
+
+#chat-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+#chat-send {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+}
+
+#chat-send:hover {
+    background-color: var(--accent-color);
+}
+
 /* --- 13. Responsive Design --- */
+.mobile-nav-toggle {
+    display: none;
+}
+
 @media(max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
+    .section {
+        padding: 4rem 0;
     }
 
-    /* Mobile Nav */
-    .nav-links {
-        display: none; /* Add JS to toggle this */
+    .section-title {
+        font-size: 2.2rem;
     }
     
     .grid-3, .about-content, .contact-grid {
@@ -462,5 +685,98 @@ img {
     .event-card img {
         width: 100%;
         height: 200px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    /* Mobile Nav */
+    .mobile-nav-toggle {
+        display: block;
+        position: relative;
+        z-index: 9999;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        width: 2em;
+        height: 2em;
+    }
+
+    .mobile-nav-toggle .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    .mobile-nav-toggle::before,
+    .mobile-nav-toggle::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 2em;
+        height: 3px;
+        border-radius: 5px;
+        background: #FFFFFF; /* White on hero */
+        transition: transform 350ms ease-out, background-color 350ms ease-out;
+    }
+
+    .header.scrolled .mobile-nav-toggle::before,
+    .header.scrolled .mobile-nav-toggle::after {
+        background: var(--header-text);
+    }
+
+    .mobile-nav-toggle::before {
+        top: 0.5em;
+    }
+
+    .mobile-nav-toggle::after {
+        bottom: 0.5em;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"]::before {
+        transform: rotate(45deg) translate(0.4em, 0.5em) scaleX(0.9);
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"]::after {
+        transform: rotate(-45deg) translate(0.4em, -0.5em) scaleX(0.9);
+    }
+
+    .nav-links {
+        display: flex;
+        position: fixed;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(20vh, 10rem) 2rem;
+        gap: 2rem;
+        background: var(--header-bg);
+        backdrop-filter: blur(1rem);
+        -webkit-backdrop-filter: blur(1rem);
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .nav-links[data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    /* Chatbot on mobile */
+    .chatbot {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .chatbot-trigger button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .chat-window {
+        width: calc(100vw - 2rem);
+        bottom: 70px;
     }
 }
