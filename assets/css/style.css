@@ -295,6 +295,30 @@ img {
     color: var(--primary-color);
 }
 
+.event-card-featured {
+    grid-column: 1 / -1; /* Span full width */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    background: linear-gradient(45deg, var(--primary-color), var(--heading-color));
+    color: white;
+}
+
+.event-card-featured .event-card-content {
+    padding: 3rem;
+}
+
+.event-card-featured .event-date {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.event-card-featured h3 {
+    color: white;
+    font-size: 2.5rem;
+}
+
 /* --- 6. About Page & Animated Sections --- */
 .about-content, .mission-content {
     display: grid;
@@ -432,19 +456,93 @@ img {
 
 /* --- 11. Footer --- */
 .footer {
-    background: var(--heading-color);
-    color: var(--bg-color);
-    padding: 3rem 0;
-    text-align: center;
+    background: var(--card-bg);
+    color: var(--text-color);
+    padding: 5rem 0 2rem;
     transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
-.footer p {
-    margin: 0;
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
 }
 
-.footer a {
-    color: var(--accent-color);
+.footer-col h4 {
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-col a {
+    color: var(--text-color);
+    transition: color var(--transition-speed) ease;
+}
+
+.footer-col a:hover {
+    color: var(--primary-color);
+}
+
+.logo-footer {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.logo-footer span {
+    color: var(--primary-color);
+}
+
+.footer-about {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--border-color);
+    color: var(--heading-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all var(--transition-speed) ease;
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.social-links svg {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
 }
 
 /* --- 12. Animations --- */
@@ -478,18 +576,68 @@ img {
 .theme-toggle-btn {
     background: none;
     border: none;
-    color: #FFFFFF; /* White on hero */
-    font-size: 1.5rem;
     cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-icon {
+    width: 24px;
+    height: 24px;
+    color: #FFFFFF; /* White on hero */
     transition: color var(--transition-speed) ease;
 }
 
-.header.scrolled .theme-toggle-btn {
+.header.scrolled .theme-icon {
     color: var(--header-text);
 }
 
-.theme-toggle-btn:hover {
+.moon-icon {
+    display: none;
+}
+
+.dark-mode .sun-icon {
+    display: none;
+}
+
+.dark-mode .moon-icon {
+    display: block;
+}
+
+.theme-toggle-btn:hover .theme-icon {
     color: var(--accent-color);
+}
+
+.program-card .program-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.animated-drone {
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    font-size: 4rem;
+    opacity: 0.2;
+    animation: fly-by 20s linear infinite;
+    z-index: 0;
+}
+
+@keyframes fly-by {
+    from {
+        left: -10%;
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(40px) rotate(5deg);
+    }
+    to {
+        left: 110%;
+        transform: translateY(0) rotate(0deg);
+    }
 }
 
 /* --- 14. Chatbot --- */
@@ -519,9 +667,9 @@ img {
 
 .chatbot-trigger .tooltip {
     position: absolute;
-    top: -40px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 50%;
+    right: 120%; /* Position to the left of the button */
+    transform: translateY(50%);
     background-color: var(--heading-color);
     color: var(--bg-color);
     padding: 0.5rem 1rem;
@@ -530,6 +678,17 @@ img {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s, visibility 0.2s;
+}
+
+.chatbot-trigger .tooltip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--heading-color);
 }
 
 .chatbot-trigger:hover .tooltip {
@@ -686,6 +845,10 @@ img {
         width: 100%;
         height: 200px;
         border-radius: 20px 20px 0 0;
+    }
+
+    .event-card-featured {
+        grid-template-columns: 1fr;
     }
 
     /* Mobile Nav */
