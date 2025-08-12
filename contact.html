@@ -1,69 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Drobotain</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <header class="header scrolled">
-        <nav class="navbar container">
-            <a href="index.html" class="logo">DROBO<span>TAIN</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="section" style="padding-top: 120px;">
-            <div class="container">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="text-center" style="max-width: 800px; margin: 0 auto 3rem auto;">Have a question or want to register for a program? Send us a message or visit us.</p>
-                
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Contact Details</h3>
-                        <p><strong>Address:</strong> Plot 1457, Jahi District, Cadastral Zone B8, Jahi. Abuja Nigeria.</p>
-                        <p><strong>Phone:</strong> +234 800 001 111</p>
-                        <p><strong>Email:</strong> <a href="mailto:info@dronbotain.com">info@dronbotain.com</a></p>
-                        <img src="assets/images/map.png" alt="Location map" style="margin-top: 2rem; border-radius: 5px;">
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-wrapper animate-on-scroll">
+            <div class="contact-form-container">
+                <h3>Send Us a Message</h3>
+                <p>Have a question or a project in mind? Use the form below to get in touch with our team.</p>
+                <form id="contact-form" novalidate>
+                    <div class="form-group">
+                        <svg class="form-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5a.75.75 0 01.75.75v.25h-1.5V3.25a.75.75 0 01.75-.75zM12 6a3 3 0 100 6 3 3 0 000-6zM5.271 14.126a8.956 8.956 0 0113.458 0 .75.75 0 01-.43 1.283h-12.6a.75.75 0 01-.428-1.283z"/></svg>
+                        <input type="text" id="name" name="name" required placeholder="Your Full Name">
                     </div>
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                    <div class="form-group">
+                        <svg class="form-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/><path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/></svg>
+                        <input type="email" id="email" name="email" required placeholder="Your Email Address">
+                    </div>
+                    <div class="form-group">
+                        <svg class="form-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653z" clip-rule="evenodd" /></svg>
+                        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info-card">
+                <h3>Contact Details</h3>
+                <p>Find us at our headquarters or reach out via our digital channels.</p>
+                <div class="info-item">
+                    <strong>Location:</strong>
+                    <span>Lagos, Nigeria</span>
+                </div>
+                <div class="info-item">
+                    <strong>Email:</strong>
+                    <a href="mailto:connect@drobotain.com">connect@drobotain.com</a>
+                </div>
+                 <div class="info-item">
+                    <strong>Phone:</strong>
+                    <a href="tel:+234000000000">+234 (0) 000 000 000</a>
+                </div>
+                <div class="map-container">
+                     <iframe 
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=3.35,6.45,3.45,6.55&layer=mapnik&marker=6.5244,3.3792" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Drobotain. All Rights Reserved.</p>
         </div>
-    </footer>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+    </div>
+</section>

@@ -3,107 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drobotain | Empowering Future Tech Leaders</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Drobotain - Pioneering Robotics & AI in Africa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="header">
-        <nav class="navbar container">
-            <a href="index.html" class="logo">
-                <img src="assets/images/logo.png" alt="Drobotain Logo" style="height: 40px;">
-            </a>
-            <button class="mobile-nav-toggle" aria-controls="nav-links" aria-expanded="false">
-                <span class="sr-only">Menu</span>
-            </button>
-            <div class="nav-wrapper">
-                <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html" class="nav-link"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16"> <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/> </svg><span>Home</span></a></li>
-                    <li><a href="about.html" class="nav-link"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16"> <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/> <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/> </svg><span>About Us</span></a></li>
-                    <li><a href="programs.html" class="nav-link"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16"> <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM9 2.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5zM9 10.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"/> </svg><span>Programs</span></a></li>
-                    <li><a href="courses.html" class="nav-link"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16"> <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zM13 4.5a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5zM5 4h6V2.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0-.5.5zM1 7v5.5a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5V7z"/> </svg><span>Professional Development</span></a></li>
-                    <li><a href="gallery.html" class="nav-link"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-image" viewBox="0 0 16 16"> <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/> <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2zM1 3.5a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5z"/> </svg><span>Gallery</span></a></li>
-                    <li><a href="contact.html" class="nav-link"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"> <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/> </svg><span>Contact</span></a></li>
-                </ul>
-                <div class="nav-actions">
-                    <a href="store.html" class="nav-link nav-link-store"><svg class="nav-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16"> <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/> </svg><span>Store</span></a>
-                    <button id="theme-toggle" class="theme-toggle-btn">
-                        <span class="sr-only">Toggle theme</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="theme-icon sun-icon">
-                            <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-                        </svg>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" class="theme-icon moon-icon">
-                            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"/>
-                        </svg>
-                    </button>
-                </div>
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">DROBOTAIN</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+                <li class="nav-item"><a href="pro-dev.html" class="nav-link">Professional Development</a></li>
+                <li class="nav-item"><a href="store.html" class="nav-link">Store</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link btn">Register</a></li>
+            </ul>
+            <div class="theme-switcher">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.591-1.591a.75.75 0 011.06 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM17.836 17.836a.75.75 0 01-1.06 0l-1.591-1.591a.75.75 0 111.06-1.06l1.591 1.591a.75.75 0 010 1.06zM12 18.75a.75.75 0 01-.75.75v2.25a.75.75 0 011.5 0v-2.25a.75.75 0 01-.75-.75zM6.106 18.894a.75.75 0 011.06 0l1.591-1.591a.75.75 0 01-1.06-1.06l-1.591 1.591a.75.75 0 010 1.06zM4.5 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H5.25a.75.75 0 01-.75-.75zM6.164 7.164a.75.75 0 01-1.06-1.06l1.591-1.591a.75.75 0 111.06 1.06L6.164 7.164z"/></svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.472-.69a.75.75 0 11.582 1.364A10.5 10.5 0 119.69 3.099a.75.75 0 01.819-.162z" clip-rule="evenodd" /></svg>
             </div>
-
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
 
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Empowering the Future Through Drone Competitions and Robotic Education</h1>
-                <p>We are at the forefront of merging education and competition with cutting-edge robotics and drone technology to inspire the next generation of innovators in Africa.</p>
-                <a href="programs.html" class="btn btn-primary">Explore Our Programs</a>
+                <h1 class="hero-title animate-in">Building Africa's Future with <span class="highlight">Drones</span> & <span class="highlight">AI</span>.</h1>
+                <p class="hero-subtitle animate-in">Fostering innovation through education, competition, and hands-on training in robotics and intelligent systems.</p>
+                <a href="programs.html" class="btn btn-primary animate-in">Explore Programs</a>
             </div>
-        </section>
-
-        <section id="services" class="section">
-            <div class="container">
-                <h2 class="section-title">Services We Offer</h2>
-                <div class="grid-3">
-                    <div class="card">
-                        <h3>Training for Students</h3>
-                        <p>Engaging, hands-on learning experiences to equip young minds with the skills for tomorrow.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Training for Educators</h3>
-                        <p>Empowering teachers with the knowledge to bring STEAM and robotics into the classroom.</p>
-                    </div>
-                    <div class="card">
-                        <h3>STEAM Laboratory Setup</h3>
-                        <p>We help schools and institutions design and set up state-of-the-art STEAM labs.</p>
-                    </div>
+            <div class="hero-visual animate-in">
+                <div class="drone">
+                    <div class="drone-body"></div>
+                    <div class="drone-arm arm-1"></div>
+                    <div class="drone-arm arm-2"></div>
+                    <div class="drone-arm arm-3"></div>
+                    <div class="drone-arm arm-4"></div>
+                    <div class="propeller prop-1"></div>
+                    <div class="propeller prop-2"></div>
+                    <div class="propeller prop-3"></div>
+                    <div class="propeller prop-4"></div>
                 </div>
             </div>
         </section>
 
-        <section id="events" class="section" style="background-color: var(--off-white);">
-            <div class="container">
-                <h2 class="section-title">Upcoming Events</h2>
-                <div class="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item">
-                            <div class="event-card">
-                                <img src="assets/images/event-1.jpg" alt="Drone Competition">
-                                <div class="event-content">
-                                    <h3>Drone Competition: First of its kind in Nigeria</h3>
-                                    <p>Get ready for a thrilling challenge that tests creativity, technical skill, and problem-solving. A new era of competition is coming soon.</p>
-                                    <p><strong>Date:</strong> Coming Soon</p>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    <div class="carousel-controls">
-                        <button class="carousel-btn carousel-prev">&lt; Prev</button>
-                        <button class="carousel-btn carousel-next">Next &gt;</button>
-                    </div>
-                </div>
+       <section class="upcoming-events">
+    <div class="container">
+        <div class="teaser-box animate-on-scroll">
+            <div class="teaser-visual">
+                <div class="orb"></div>
             </div>
-        </section>
+            <div class="teaser-content">
+                <h2 class="teaser-title">Something <span class="highlight">BIG</span> is Coming.</h2>
+                <p>A new chapter in African innovation is about to unfold. We are preparing an experience that will redefine the future of robotics and AI education.</p>
+                <a href="contact.html" class="btn btn-secondary">Stay Tuned</a>
+            </div>
+        </div>
+    </div>
+</section>
 
+        <section class="about-snippet">
+             <div class="container">
+                <div class="about-snippet-content animate-on-scroll">
+                    <h2 class="section-title">Innovate. Educate. Inspire.</h2>
+                    <p>Drobotain is at the forefront of merging education with cutting-edge robotics and drone technology. We are dedicated to building a sustainable drone industry in Africa by nurturing local talent and fostering critical STEM skills.</p>
+                    <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
+                </div>
+             </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">DROBOTAIN</a>
+                <p>Pioneering the future of technology in Africa.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
+                    <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.62 1.62 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.3.86 3.3 3.6v5.5z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.802c-3.116 0-3.483.01-4.698.067-2.181.1-3.284 1.192-3.385 3.385-.057 1.214-.067 1.58-.067 4.698s.01 3.483.067 4.698c.101 2.193 1.204 3.284 3.385 3.385 1.215.057 1.582.067 4.698.067s3.483-.01 4.698-.067c2.181-.1 3.284-1.192 3.385-3.385.057-1.214.067-1.58.067-4.698s-.01-3.483-.067-4.698c-.101-2.193-1.204-3.284-3.385-3.385C15.483 3.975 15.116 3.965 12 3.965zM12 9.25a2.75 2.75 0 100 5.5 2.75 2.75 0 000-5.5zm0 7.352a4.602 4.602 0 110-9.204 4.602 4.602 0 010 9.204zM16.5 7.5a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
             <p>&copy; 2025 Drobotain. All Rights Reserved.</p>
-            <p>Plot 1457, Jahi District, Cadastral Zone B8, Jahi. Abuja Nigeria. | <a href="mailto:info@dronbotain.com">info@dronbotain.com</a></p>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
