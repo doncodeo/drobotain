@@ -96,32 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
         yearEl.textContent = new Date().getFullYear();
     }
 
-    // --- 7. Countdown Timer ---
-    const countdown = () => {
-        const countDate = new Date(new Date().getTime() + 30 * 24 * 60 * 60 * 1000).getTime();
-        const now = new Date().getTime();
-        const gap = countDate - now;
-
-        const second = 1000;
-        const minute = second * 60;
-        const hour = minute * 60;
-        const day = hour * 24;
-
-        const textDay = Math.floor(gap / day);
-        const textHour = Math.floor((gap % day) / hour);
-        const textMinute = Math.floor((gap % hour) / minute);
-        const textSecond = Math.floor((gap % minute) / second);
-
-        document.getElementById('days').innerText = textDay < 10 ? '0' + textDay : textDay;
-        document.getElementById('hours').innerText = textHour < 10 ? '0' + textHour : textHour;
-        document.getElementById('minutes').innerText = textMinute < 10 ? '0' + textMinute : textMinute;
-        document.getElementById('seconds').innerText = textSecond < 10 ? '0' + textSecond : textSecond;
-    };
-
-    if (document.getElementById('days')) {
-        setInterval(countdown, 1000);
-    }
-
     // --- 8. Chatbot ---
     const chatbot = document.querySelector('.chatbot');
     const chatbotToggleBtn = document.querySelector('.chatbot-toggle-btn');
@@ -141,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "what is drobotain": "Drobotain merges education and competition with cutting-edge robotics and drone technology to build a sustainable drone industry in Africa.",
         "programs": "We offer competitions like Drone Soccer and Robotics Arm Challenge, as well as STEAM education for students and educators. You can find more details on our Programs page.",
         "contact": "You can reach us at info@dronbotain.com or call +234 800 001 1111.",
-        "agent": "To speak with a live agent, please choose one of the following WhatsApp numbers: <br><a href='https://wa.me/2349041444403' target='_blank'>Agent 1 (+234 904 144 4403)</a><br><a href='https://wa.me/2348032899111' target='_blank'>Agent 2 (+234 803 289 9111)</a>",
+        "agent": "To speak with a live agent, please click the link to connect via WhatsApp: <a href='https://wa.me/2348032899111?text=Coming%20from%20Drobotain%20Web%20page' target='_blank'>Connect to Live Agent</a>",
         "default": "I'm not sure how to answer that. Can you try asking another question? You can also type 'agent' to connect with a person."
     };
 
