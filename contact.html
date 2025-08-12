@@ -1,3 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Drobotain</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">DROBOTAIN</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="programs.html" class="nav-link">Programs</a></li>
+                <li class="nav-item"><a href="pd+.html" class="nav-link">PD+</a></li>
+                <li class="nav-item"><a href="store.html" class="nav-link">Store</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link btn active">Register</a></li>
+            </ul>
+             <div class="theme-switcher">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.591-1.591a.75.75 0 011.06 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM17.836 17.836a.75.75 0 01-1.06 0l-1.591-1.591a.75.75 0 111.06-1.06l1.591 1.591a.75.75 0 010 1.06zM12 18.75a.75.75 0 01-.75.75v2.25a.75.75 0 011.5 0v-2.25a.75.75 0 01-.75-.75zM6.106 18.894a.75.75 0 011.06 0l1.591-1.591a.75.75 0 01-1.06-1.06l-1.591 1.591a.75.75 0 010 1.06zM4.5 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H5.25a.75.75 0 01-.75-.75zM6.164 7.164a.75.75 0 01-1.06-1.06l1.591-1.591a.75.75 0 111.06 1.06L6.164 7.164z"/></svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 004.472-.69a.75.75 0 11.582 1.364A10.5 10.5 0 119.69 3.099a.75.75 0 01.819-.162z" clip-rule="evenodd" /></svg>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+<main>
 <section class="contact-section">
     <div class="container">
         <div class="contact-wrapper animate-on-scroll">
@@ -46,8 +81,28 @@
         </div>
     </div>
 </section>
-
-    <footer class="footer">
+</main>
+<div class="chatbot">
+        <div class="chatbot-header">
+            <p>Drobotain Assistant</p>
+            <span class="close-btn">&times;</span>
+        </div>
+        <div class="chatbot-body">
+            <div class="message bot-message">
+                <p>Hello! How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Ask a question...">
+            <button id="chatbot-send">Send</button>
+        </div>
+    </div>
+    <button class="chatbot-toggle-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="chatbot-icon">
+            <path fill-rule="evenodd" d="M4.5 3.75a3 3 0 00-3 3v10.5a3 3 0 003 3h15a3 3 0 003-3V6.75a3 3 0 00-3-3h-15zm4.125 3a.75.75 0 000 1.5h6.75a.75.75 0 000-1.5h-6.75zm-3 3.75a.75.75 0 01.75-.75h11.25a.75.75 0 010 1.5H6.375a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3zm5.25 0a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" clip-rule="evenodd" />
+        </svg>
+    </button>
+<footer class="footer">
         <div class="container footer-container">
             <div class="footer-col">
                 <a href="index.html" class="footer-logo">DROBOTAIN</a>
@@ -76,22 +131,6 @@
             <p>&copy; <span id="year"></span> Drobotain. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <div class="chatbot">
-        <div class="chatbot-header">
-            <p>Drobotain Assistant</p>
-            <span class="close-btn">&times;</span>
-        </div>
-        <div class="chatbot-body">
-            <div class="message bot-message">
-                <p>Hello! How can I help you today?</p>
-            </div>
-        </div>
-        <div class="chatbot-footer">
-            <input type="text" id="chatbot-input" placeholder="Ask a question...">
-            <button id="chatbot-send">Send</button>
-        </div>
-    </div>
-    <button class="chatbot-toggle-btn">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-7.152.52c-2.43 0-4.817-.178-7.152-.52-1.978-.292-3.348-2.024-3.348-3.97v-6.02c0-1.946 1.37-3.678 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h9a.75.75 0 000-1.5h-9z" clip-rule="evenodd" /><path d="M12 18a3.75 3.75 0 003.75-3.75H8.25A3.75 3.75 0 0012 18z" /></svg>
-    </button>
+<script src="js/script.js"></script>
+</body>
+</html>
