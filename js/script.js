@@ -61,34 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
     
-    // --- 5. Contact Form Validation (for contact.html) ---
-    const contactForm = document.querySelector('#contact-form');
-    if(contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent actual submission
-            
-            const name = document.querySelector('#name').value.trim();
-            const email = document.querySelector('#email').value.trim();
-            const message = document.querySelector('#message').value.trim();
-            let isValid = true;
-            
-            if (name === '') {
-                alert('Please enter your name.');
-                isValid = false;
-            } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                alert('Please enter a valid email address.');
-                isValid = false;
-            } else if (message.length < 10) {
-                alert('Message must be at least 10 characters long.');
-                isValid = false;
-            }
-            
-            if(isValid) {
-                alert('Thank you for your message! We will get back to you soon.');
-                contactForm.reset();
-            }
-        });
-    }
 
     // --- 6. Dynamic Year in Footer ---
     const yearEl = document.getElementById('year');
