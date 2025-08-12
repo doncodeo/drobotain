@@ -57,19 +57,32 @@
         </section>
 
        <section class="upcoming-events">
-    <div class="container">
-        <div class="teaser-box animate-on-scroll">
-            <div class="teaser-visual">
-                <div class="orb"></div>
+            <div class="container">
+                <div class="teaser-content animate-on-scroll">
+                    <h2 class="teaser-title">Something <span class="highlight">BIG</span> is Coming.</h2>
+                    <p>A new chapter in African innovation is about to unfold. We are preparing an experience that will redefine the future of robotics and AI education.</p>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span id="days">00</span>
+                            <p>Days</p>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours">00</span>
+                            <p>Hours</p>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes">00</span>
+                            <p>Minutes</p>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds">00</span>
+                            <p>Seconds</p>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary">Notify Me</a>
+                </div>
             </div>
-            <div class="teaser-content">
-                <h2 class="teaser-title">Something <span class="highlight">BIG</span> is Coming.</h2>
-                <p>A new chapter in African innovation is about to unfold. We are preparing an experience that will redefine the future of robotics and AI education.</p>
-                <a href="contact.html" class="btn btn-secondary">Stay Tuned</a>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <section class="about-snippet">
              <div class="container">
@@ -108,10 +121,28 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Drobotain. All Rights Reserved.</p>
+            <p>&copy; <span id="year"></span> Drobotain. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <div class="chatbot">
+        <div class="chatbot-header">
+            <p>Drobotain Assistant</p>
+            <span class="close-btn">&times;</span>
+        </div>
+        <div class="chatbot-body">
+            <div class="message bot-message">
+                <p>Hello! How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Ask a question...">
+            <button id="chatbot-send">Send</button>
+        </div>
+    </div>
+    <button class="chatbot-toggle-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-7.152.52c-2.43 0-4.817-.178-7.152-.52-1.978-.292-3.348-2.024-3.348-3.97v-6.02c0-1.946 1.37-3.678 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h9a.75.75 0 000-1.5h-9z" clip-rule="evenodd" /><path d="M12 18a3.75 3.75 0 003.75-3.75H8.25A3.75 3.75 0 0012 18z" /></svg>
+    </button>
     <script src="js/script.js"></script>
 </body>
 </html>

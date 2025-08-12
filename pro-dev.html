@@ -35,7 +35,53 @@
     </main>
 
     <footer class="footer">
-        </footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">DROBOTAIN</a>
+                <p>Pioneering the future of technology in Africa.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
+                    <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.62 1.62 0 0013 14.19V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.3.86 3.3 3.6v5.5z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664 4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.802c-3.116 0-3.483.01-4.698.067-2.181.1-3.284 1.192-3.385 3.385-.057 1.214-.067 1.58-.067 4.698s.01 3.483.067 4.698c.101 2.193 1.204 3.284 3.385 3.385 1.215.057 1.582.067 4.698.067s3.483-.01 4.698-.067c2.181-.1 3.284-1.192 3.385-3.385.057-1.214.067-1.58.067-4.698s-.01-3.483-.067-4.698c-.101-2.193-1.204-3.284-3.385-3.385C15.483 3.975 15.116 3.965 12 3.965zM12 9.25a2.75 2.75 0 100 5.5 2.75 2.75 0 000-5.5zm0 7.352a4.602 4.602 0 110-9.204 4.602 4.602 0 010 9.204zM16.5 7.5a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/></svg></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Drobotain. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <div class="chatbot">
+        <div class="chatbot-header">
+            <p>Drobotain Assistant</p>
+            <span class="close-btn">&times;</span>
+        </div>
+        <div class="chatbot-body">
+            <div class="message bot-message">
+                <p>Hello! How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Ask a question...">
+            <button id="chatbot-send">Send</button>
+        </div>
+    </div>
+    <button class="chatbot-toggle-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-7.152.52c-2.43 0-4.817-.178-7.152-.52-1.978-.292-3.348-2.024-3.348-3.97v-6.02c0-1.946 1.37-3.678 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 2.25a.75.75 0 000 1.5h9a.75.75 0 000-1.5h-9z" clip-rule="evenodd" /><path d="M12 18a3.75 3.75 0 003.75-3.75H8.25A3.75 3.75 0 0012 18z" /></svg>
+    </button>
     <script src="js/script.js"></script>
 </body>
 </html>
