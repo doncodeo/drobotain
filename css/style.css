@@ -626,6 +626,81 @@ section {
     filter: grayscale(0);
 }
 
+/* Drone Services Section (Home Page) */
+.drone-services {
+    background-color: var(--bg-color);
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+.service-item {
+    padding: 1.5rem;
+    background-color: var(--alternate-bg-color);
+    border-radius: 12px;
+    font-weight: 500;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+    color: var(--primary-color);
+}
+
+/* Services Page */
+.services-content {
+    padding: 80px 0;
+}
+.services-grid-detailed {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+.service-card-detailed {
+    background: var(--alternate-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+.service-card-detailed:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+.dark-theme .service-card-detailed:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+.service-card-detailed h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+.cta-section {
+    text-align: center;
+    background-color: var(--alternate-bg-color);
+    padding: 4rem 2rem;
+    border-radius: 16px;
+}
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-large {
+    padding: 18px 40px;
+    font-size: 1.2rem;
+}
+
+
 /* Coming Soon Page */
 .coming-soon {
     min-height: 60vh;
