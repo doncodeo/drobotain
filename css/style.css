@@ -13,9 +13,9 @@
 :root {
     --bg-color: #ffffff;
     --text-color: #1a1a1a;
-    --primary-color: #007aff; /* Electric Blue */
+    --primary-color: #fec76f; /* New Brand Color */
     --secondary-color: #555;
-    --accent-color: #ffbf00; /* Gold Accent */
+    --accent-color: #fec76f; /* New Brand Color */
     --border-color: #e5e5e5;
     --header-bg: rgba(255, 255, 255, 0.8);
     --footer-bg: #f8f8f8;
@@ -139,7 +139,7 @@ p {
     font-family: var(--font-secondary);
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 .nav-menu {
@@ -743,10 +743,15 @@ section {
     flex: 1;
     min-width: 250px;
 }
+.footer-logo-img {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
 .footer-logo {
     font-family: var(--font-secondary);
     font-size: 1.8rem;
-    color: var(--text-color);
+    color: var(--primary-color);
     margin-bottom: 1rem;
     display: inline-block;
 }
