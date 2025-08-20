@@ -60,6 +60,37 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    // --- 5. Hero Slider ---
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    const showSlide = (n) => {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        slides[n].classList.add('active');
+        dots[n].classList.add('active');
+        currentSlide = n;
+    };
+
+    const nextSlide = () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    };
+
+    if (slides.length > 0) {
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                showSlide(parseInt(dot.dataset.slide));
+                slideInterval = setInterval(nextSlide, 5000); // Restart interval
+            });
+        });
+
+        slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    }
     
 
     // --- 6. Dynamic Year in Footer ---
