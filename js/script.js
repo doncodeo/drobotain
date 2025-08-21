@@ -161,7 +161,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // --- 9. Image Modal ---
+    // --- 9. Blurred Background for Service Images ---
+    try {
+        document.querySelectorAll('.service-card-detailed .card-image').forEach(cardImage => {
+            const img = cardImage.querySelector('img');
+            if (img && img.src) {
+                const blurryBg = document.createElement('div');
+                blurryBg.style.backgroundImage = `url(${img.src})`;
+                blurryBg.classList.add('blurry-background');
+                cardImage.prepend(blurryBg);
+            }
+        });
+    } catch (e) {
+        console.error("Error in blurred background script:", e);
+    }
+
+
+    // --- 10. Image Modal ---
     try {
         const modal = document.getElementById("image-modal");
         const modalImg = document.getElementById("modal-image");
