@@ -1230,10 +1230,9 @@ body.dark-theme .hero-visual.animate-in {
     z-index: 1000;
 }
 
-.chatbot-toggle-btn .chatbot-icon {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
+.chatbot-toggle-btn svg {
+    width: 30px;
+    height: 30px;
 }
 
 /* Image Modal */
