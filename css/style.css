@@ -969,7 +969,7 @@ body.dark-theme .hero-visual.animate-in {
 .floating-drone {
     position: fixed;
     bottom: 150px;
-    right: -50px;
+    right: 20px;
     width: 200px;
     height: auto;
     z-index: 999;
@@ -1230,9 +1230,10 @@ body.dark-theme .hero-visual.animate-in {
     z-index: 1000;
 }
 
-.chatbot-toggle-btn svg {
-    width: 30px;
-    height: 30px;
+.chatbot-toggle-btn .chatbot-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
 
 /* Image Modal */
