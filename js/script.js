@@ -160,4 +160,29 @@ document.addEventListener('DOMContentLoaded', function() {
             sendMessage();
         }
     });
+
+    // --- 9. Image Modal ---
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-image");
+    const images = document.querySelectorAll('.expandable-image');
+    const closeModal = document.querySelector(".close-modal");
+
+    images.forEach(img => {
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+    });
+
+    if(closeModal) {
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+        }
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 });
