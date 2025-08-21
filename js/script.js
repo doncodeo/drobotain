@@ -160,4 +160,38 @@ document.addEventListener('DOMContentLoaded', function() {
             sendMessage();
         }
     });
+
+    // --- 9. Image Modal ---
+    try {
+        const modal = document.getElementById("image-modal");
+        const modalImg = document.getElementById("modal-image");
+        const images = document.querySelectorAll('.expandable-image');
+        const closeModal = document.querySelector(".close-modal");
+
+        console.log("Modal script loaded");
+        console.log("Found images:", images.length);
+
+        images.forEach(img => {
+            img.addEventListener('click', function(){
+                console.log("Image clicked:", this.src);
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            });
+        });
+
+        if(closeModal) {
+            closeModal.addEventListener('click', function() {
+                console.log("Close button clicked");
+                modal.style.display = "none";
+            });
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    } catch (e) {
+        console.error("Error in modal script:", e);
+    }
 });
