@@ -161,7 +161,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // --- 9. Blurred Background for Service Images ---
+    // --- 9. Chatbot popup ---
+    const showPopup = () => {
+        if (sessionStorage.getItem('chatbotPopupShown')) return;
+
+        setTimeout(() => {
+            chatbot.classList.add('active');
+            appendMessage("Need help? Chat with us!", 'bot-message');
+            sessionStorage.setItem('chatbotPopupShown', 'true');
+        }, 5000); // 5 seconds delay
+    };
+
+    showPopup();
+
+    // --- 10. Blurred Background for Service Images ---
     try {
         document.querySelectorAll('.service-card-detailed .card-image').forEach(cardImage => {
             const img = cardImage.querySelector('img');
