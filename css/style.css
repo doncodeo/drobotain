@@ -1220,7 +1220,7 @@ body.dark-theme .hero-visual.animate-in {
 .modal {
     display: none;
     position: fixed;
-    z-index: 1001;
+    z-index: 1002;
     padding-top: 100px;
     left: 0;
     top: 0;
