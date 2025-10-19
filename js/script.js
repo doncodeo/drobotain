@@ -234,6 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const fullDescriptionHTML = card.querySelector('.full-description').innerHTML;
                 const imageSrc = card.querySelector('.card-image img').src;
                 const buttonText = card.querySelector('.btn-primary').textContent;
+                const buttonUrl = card.querySelector('.btn-primary').href;
 
                 serviceModalTitle.textContent = title;
 
@@ -251,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Create and add the dynamic button
                 const demoButton = document.createElement('a');
-                demoButton.href = 'https://wa.me/2348032899111?text=I%20need%20your%20drone%20service';
+                demoButton.href = buttonUrl;
                 demoButton.className = 'btn btn-primary';
                 demoButton.target = '_blank';
                 demoButton.textContent = buttonText;
