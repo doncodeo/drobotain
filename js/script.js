@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // --- 12. Truncate Service Card Descriptions ---
-    document.querySelectorAll('.service-card-detailed p').forEach(p => {
+    document.querySelectorAll('.service-card-detailed > p').forEach(p => {
         const fullText = p.textContent;
         const maxLen = 100; // Truncation length
         if (fullText.length > maxLen) {
