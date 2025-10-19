@@ -85,11 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
             dot.addEventListener('click', () => {
                 clearInterval(slideInterval);
                 showSlide(parseInt(dot.dataset.slide));
-                slideInterval = setInterval(nextSlide, 30000); // Restart interval
+                slideInterval = setInterval(nextSlide, 5000); // Restart interval
             });
         });
 
-        slideInterval = setInterval(nextSlide, 30000); // Change slide every 30 seconds
+        slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
     }
     
 
