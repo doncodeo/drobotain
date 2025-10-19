@@ -1410,3 +1410,18 @@ body.dark-theme .hero-visual.animate-in {
     font-weight: bold;
     font-size: 1.2rem;
 }
+
+@media (max-width: 768px) {
+    #service-modal .modal-content {
+        padding: 2rem;
+        margin: 10% auto;
+    }
+
+    #service-modal-title {
+        font-size: 1.8rem;
+    }
+
+    #service-modal-body p, #service-modal-body ul li {
+        font-size: 0.95rem;
+    }
+}
