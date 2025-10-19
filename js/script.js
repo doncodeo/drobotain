@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        slideInterval = setInterval(nextSlide, 15000); // Change slide every 15 seconds
+        slideInterval = setInterval(nextSlide, 30000); // Change slide every 30 seconds
     }
     
 
