@@ -232,9 +232,33 @@ document.addEventListener('DOMContentLoaded', function() {
                 const card = this.closest('.service-card-detailed');
                 const title = card.querySelector('h3').textContent;
                 const fullDescriptionHTML = card.querySelector('.full-description').innerHTML;
+                const imageSrc = card.querySelector('.card-image img').src;
+                const buttonText = card.querySelector('.btn-primary').textContent;
 
                 serviceModalTitle.textContent = title;
-                serviceModalBody.innerHTML = fullDescriptionHTML;
+
+                // Create and add the image to the modal body
+                const img = document.createElement('img');
+                img.src = imageSrc;
+                img.style.width = '100%';
+                img.style.height = 'auto';
+                img.style.borderRadius = '8px';
+                img.style.marginBottom = '1.5rem';
+
+                serviceModalBody.innerHTML = ''; // Clear previous content
+                serviceModalBody.appendChild(img);
+                serviceModalBody.insertAdjacentHTML('beforeend', fullDescriptionHTML);
+
+                // Create and add the dynamic button
+                const demoButton = document.createElement('a');
+                demoButton.href = 'https://wa.me/2348032899111?text=I%20need%20your%20drone%20service';
+                demoButton.className = 'btn btn-primary';
+                demoButton.target = '_blank';
+                demoButton.textContent = buttonText;
+                demoButton.style.marginTop = '1.5rem';
+
+                serviceModalBody.appendChild(demoButton);
+
                 serviceModal.style.display = "block";
             });
         });
