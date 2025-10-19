@@ -197,12 +197,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const images = document.querySelectorAll('.expandable-image');
         const closeModal = document.querySelector(".close-modal");
 
-        console.log("Modal script loaded");
-        console.log("Found images:", images.length);
-
         images.forEach(img => {
             img.addEventListener('click', function(){
-                console.log("Image clicked:", this.src);
                 modal.style.display = "block";
                 modalImg.src = this.src;
             });
@@ -210,7 +206,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if(closeModal) {
             closeModal.addEventListener('click', function() {
-                console.log("Close button clicked");
                 modal.style.display = "none";
             });
         }
@@ -223,4 +218,46 @@ document.addEventListener('DOMContentLoaded', function() {
     } catch (e) {
         console.error("Error in modal script:", e);
     }
+
+    // --- 11. Service Details Modal ---
+    const serviceModal = document.getElementById("service-modal");
+
+    if (serviceModal) {
+        const serviceModalTitle = document.getElementById("service-modal-title");
+        const serviceModalBody = document.getElementById("service-modal-body");
+        const closeServiceModal = document.querySelector(".close-service-modal");
+
+        document.querySelectorAll('.view-more-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const card = this.closest('.service-card-detailed');
+                const title = card.querySelector('h3').textContent;
+                const fullDescriptionHTML = card.querySelector('.full-description').innerHTML;
+
+                serviceModalTitle.textContent = title;
+                serviceModalBody.innerHTML = fullDescriptionHTML;
+                serviceModal.style.display = "block";
+            });
+        });
+
+        if (closeServiceModal) {
+            closeServiceModal.addEventListener('click', function() {
+                serviceModal.style.display = "none";
+            });
+        }
+
+        window.addEventListener('click', function(event) {
+            if (event.target == serviceModal) {
+                serviceModal.style.display = "none";
+            }
+        });
+    }
+
+    // --- 12. Truncate Service Card Descriptions ---
+    document.querySelectorAll('.service-card-detailed p').forEach(p => {
+        const fullText = p.textContent;
+        const maxLen = 100; // Truncation length
+        if (fullText.length > maxLen) {
+            p.textContent = fullText.substring(0, maxLen) + "...";
+        }
+    });
 });
